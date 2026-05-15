@@ -92,15 +92,23 @@ const Header = () => {
           whileInView={{ y: "0", opacity: 1, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 2.3, duration: 0.8 }}
-          className="relative md:px-4 min-h-[448px] md:min-h-[428px] flex items-center justify-center"
+          className="relative md:px-4 min-h-[448px] md:min-h-[428px] flex items-center justify-center gap-4"
         >
           <Image
             priority
             src="/images/brickpack-hero.jpg"
-            height={500}
-            width={500}
+            height={400}
+            width={400}
             alt="BrickPack Storage Backpack"
-            className="object-contain max-h-[448px]"
+            className="object-contain max-h-[400px] w-1/2"
+          />
+          <Image
+            priority
+            src="/images/figfortress-hero.jpg"
+            height={400}
+            width={400}
+            alt="FigFortress Display Case"
+            className="object-contain max-h-[400px] w-1/2"
           />
         </motion.section>
       </div>
