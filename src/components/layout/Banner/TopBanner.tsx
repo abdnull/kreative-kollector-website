@@ -5,13 +5,10 @@ import React from "react";
 
 const TopBanner = () => {
   return (
-    <div className="bg-black text-white text-center py-2 px-2 sm:px-4 xl:px-0">
+    <div className="bg-[#00D4FF] text-white text-center py-2 px-2 sm:px-4 xl:px-0">
       <div className="relative max-w-frame mx-auto">
-        <p className="text-xs sm:text-sm">
-          Sign up and get 20% off to your first order.{" "}
-          <Link href="#" className="underline font-medium">
-            Sign Up Now
-          </Link>
+        <p className="text-xs sm:text-sm font-medium">
+          FREE Shipping on Orders Over $25 | USA Family Business | Built by Collectors, For Collectors
         </p>
         <Button
           variant="ghost"
