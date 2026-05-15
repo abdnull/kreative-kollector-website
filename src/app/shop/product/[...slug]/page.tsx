@@ -1,7 +1,5 @@
 import {
-  newArrivalsData,
-  relatedProductData,
-  topSellingData,
+  foundationProductsData,
 } from "@/app/page";
 import ProductListSec from "@/components/common/ProductListSec";
 import BreadcrumbProduct from "@/components/product-page/BreadcrumbProduct";
@@ -10,11 +8,7 @@ import Tabs from "@/components/product-page/Tabs";
 import { Product } from "@/types/product.types";
 import { notFound } from "next/navigation";
 
-const data: Product[] = [
-  ...newArrivalsData,
-  ...topSellingData,
-  ...relatedProductData,
-];
+const data: Product[] = foundationProductsData;
 
 export default function ProductPage({
   params,
@@ -40,7 +34,7 @@ export default function ProductPage({
         <Tabs />
       </div>
       <div className="mb-[50px] sm:mb-20">
-        <ProductListSec title="You might also like" data={relatedProductData} />
+        <ProductListSec title="You might also like" data={foundationProductsData} />
       </div>
     </main>
   );
