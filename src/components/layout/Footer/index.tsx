@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import React from "react";
 import { PaymentBadge, SocialNetworks } from "./footer.types";
-import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import LinksSection from "./LinksSection";
 import Image from "next/image";
@@ -27,8 +27,8 @@ const socialsData: SocialNetworks[] = [
   },
   {
     id: 4,
-    icon: <FaGithub />,
-    url: "https://github.com/mohammadoftadeh",
+    icon: <FaYoutube />,
+    url: "https://youtube.com",
   },
 ];
 
@@ -71,21 +71,20 @@ const Footer = () => {
               <h1
                 className={cn([
                   integralCF.className,
-                  "text-[28px] lg:text-[32px] mb-6",
+                  "text-[24px] lg:text-[28px] mb-6",
                 ])}
               >
-                SHOP.CO
+                KREATIVE KOLLECTOR
               </h1>
               <p className="text-black/60 text-sm mb-9">
-                We have clothes that suits your style and which you’re proud to
-                wear. From women to men.
+                Premium LEGO storage and display solutions. Built by collectors, for collectors. USA family business.
               </p>
               <div className="flex items-center">
                 {socialsData.map((social) => (
                   <Link
                     href={social.url}
                     key={social.id}
-                    className="bg-white hover:bg-black hover:text-white transition-all mr-3 w-7 h-7 rounded-full border border-black/20 flex items-center justify-center p-1.5"
+                    className="bg-white hover:bg-[#00D4FF] hover:text-white transition-all mr-3 w-7 h-7 rounded-full border border-black/20 flex items-center justify-center p-1.5"
                   >
                     {social.icon}
                   </Link>
@@ -103,21 +102,7 @@ const Footer = () => {
           <hr className="h-[1px] border-t-black/10 mb-6" />
           <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-2">
             <p className="text-sm text-center sm:text-left text-black/60 mb-4 sm:mb-0 sm:mr-1">
-              Shop.co © Made by{" "}
-              <Link
-                href="https://github.com/mohammadoftadeh"
-                className="text-black font-medium"
-              >
-                Mohammad Oftadeh
-              </Link>
-              {", "}
-              Designed by{" "}
-              <Link
-                href="https://www.figma.com/@hamzauix"
-                className="text-black font-medium"
-              >
-                Hamza Naeem
-              </Link>
+              Kreative Kollector © 2025. All rights reserved.
             </p>
             <div className="flex items-center">
               {paymentBadgesData.map((badge, _, arr) => (
@@ -133,7 +118,7 @@ const Footer = () => {
                     src={badge.srcUrl}
                     width={33}
                     height={100}
-                    alt="user"
+                    alt="payment"
                     className="max-h-[15px]"
                   />
                 </span>
